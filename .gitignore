@@ -1,14 +1,4 @@
-# Hugo output
-public/
-resources/_gen/
-.hugo_build.lock
-
-# Node
 node_modules/
-npm-debug.log*
-
-# OS / Editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+.vitepress/dist/
+.vitepress/cache/
+.hugo_build.lock

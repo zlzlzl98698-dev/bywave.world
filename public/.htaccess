@@ -1,0 +1,88 @@
+# ==============================================================================
+# bywave.world Apache 静态部署高性能与安全配置 (.htaccess)
+# ==============================================================================
+
+# 1. 开启 URL 重写引擎与 Clean URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 强制 HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 规范化：移除多余斜杠
+  RewriteCond %{THE_REQUEST} //
+  RewriteRule .* /$0 [R=301,L]
+
+  # Clean URLs: 如果请求没有扩展名且存在同名 .html 文件，直接内部重写
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # 推广跳转路由规则 (302 临时重定向，保护佣金追踪)
+  RewriteRule ^go/guangsu/?$ https://sahude.gsyvipaff.com/#/?code=keqgvT5Y [R=302,L]
+  RewriteRule ^go/muguang/?$ https://varnexa.twilightaff.com/#/?code=D1LHglg3 [R=302,L]
+  RewriteRule ^go/feimao/?$ https://www.feimaoaff.com/#/register?code=6vP5f59g [R=302,L]
+  RewriteRule ^go/weifeng/?$ https://vip02.fireflyaff.com/#/?code=881268 [R=302,L]
+  RewriteRule ^go/dalaoyun/?$ https://dlyaff.com/#/register?code=V74x1c2G [R=302,L]
+  RewriteRule ^go/xingdaomeng/?$ https://www.xdmaff.com/#/register?code=V86h1a1z [R=302,L]
+  RewriteRule ^go/ermao/?$ https://ermaoaff.com/#/register?code=P13b4c1a [R=302,L]
+  RewriteRule ^go/wuyou/?$ https://51aff.org/#/register?code=827419 [R=302,L]
+  RewriteRule ^go/weitu/?$ https://weituaff.com/#/register?code=K77x2c9m [R=302,L]
+  RewriteRule ^go/firefly/?$ https://vip02.fireflyaff.com/#/?code=615671 [R=302,L]
+</IfModule>
+
+# 2. 安全响应头配置
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 3. 静态资源长效缓存 (Cache-Control & Expires)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML 页面短缓存 (保障最新评测与优惠码秒级生效)
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+
+  # CSS 与 JS (自带 hash 指纹，长效缓存 1 年)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+
+  # 图片与字体资源
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# 4. Gzip / Deflate 压缩传输
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 5. 常见错误页自定义处理
+ErrorDocument 404 /404.html

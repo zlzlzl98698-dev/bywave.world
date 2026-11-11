@@ -1,0 +1,15 @@
+# bywave博客 (bywave.world)
+
+> bywave博客是专注于网络可观测性、科学上网跨境内网专线（IEPL/IPLC）、全平台客户端配置与生成式 AI / 海外流媒体原生解锁实测的权威评测站。
+
+## 核心架构与支柱
+
+- [42 家机场评测总览库](https://bywave.world/airports/): 覆盖 42 家主流与新锐机场评测、晚高峰测速、套餐价格与风控防跑路指南。
+- [NO.1 光速云评测报告](https://bywave.world/airports/guangsu): 2020年运营，主推 IEPL 专线与企业内网专线双架构，VLESS 协议，折算月付 8 元起，专属优惠码 AMM。
+- [旗舰高奢与企业专线评测](https://bywave.world/airports/premium/): 聚焦 IEPL/IPLC 物理专线、晚高峰零丢包、跨境电商独享原生 IP。
+- [平价高性价比与轻量备用](https://bywave.world/airports/budget/): 百元年付、不限时永久流量包、备用容灾方案。
+- [专线网络与底层拓扑](https://bywave.world/lines/): IEPL/IPLC 专线原理、BGP 智能中转、QoS 绕过机制。
+- [跨平台客户端配置指南](https://bywave.world/clients/): Clash Verge Rev、Shadowrocket、Sing-box、v2rayN 全平台教程。
+- [流媒体与 AI 原生解锁](https://bywave.world/unlock/): ChatGPT (GPT-4o)、Claude 3.5 Sonnet、Gemini、Netflix 4K HDR 解锁实测。
+- [科学上网协议与底层安全](https://bywave.world/protocols/): VLESS、XTLS-Reality、Hysteria 2、TUIC v5、Trojan 深度技术解析。
+- [场景选型与避坑保障](https://bywave.world/guides/): 跨境电商防关联、TikTok 出海、游戏加速与防跑路维权。

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>山水云 on bywave博客 | 网络可观测性与机场节点权威评测站</title>
+		<link>https://bywave.world/tags/%E5%B1%B1%E6%B0%B4%E4%BA%91/</link>
+		<description>Recent content in 山水云 on bywave博客 | 网络可观测性与机场节点权威评测站</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 11 Nov 2026 10:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="https://bywave.world/tags/%E5%B1%B1%E6%B0%B4%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>山水云 深度档案与历史测速核验：中转优化 / 站群溯源与买前避坑全析</title>
+				<link>https://bywave.world/airports/shanshuiyun/</link>
+				<pubDate>Tue, 10 Nov 2026 08:00:00 +0800</pubDate>
+				<guid>https://bywave.world/airports/shanshuiyun/</guid>
+				<description>&lt;h2 id=&#34;1-品牌技术摘要与可观测性看板&#34;&gt;1. 品牌技术摘要与可观测性看板&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;NOC 实验室技术核验&lt;/strong&gt;：在 42 家机场品牌性能监测矩阵中，&lt;strong&gt;山水云&lt;/strong&gt; 位列全站评测 &lt;strong&gt;NO.37&lt;/strong&gt;。数据状态标记为 &lt;strong&gt;🟡 Vendor Data (历史项目与品牌申报资料)&lt;/strong&gt;。其核心线路为 &lt;strong&gt;中转优化&lt;/strong&gt;，最低门槛为 &lt;strong&gt;¥15/月 (100G)&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;div style=&#34;background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(56, 189, 248, 0.1) 100%); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;&#34;&gt;&#xA;  &lt;div&gt;&#xA;    &lt;div style=&#34;font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-success); text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;&#34;&gt;&#xA;      🎁 专属限时优惠代码 (点击即可一键复制并直达)&#xA;    &lt;/div&gt;&#xA;    &lt;div style=&#34;display: flex; align-items: center; gap: 0.75rem;&#34;&gt;&#xA;      &lt;span onclick=&#34;copyCoupon(&#39;待核实&#39;, &#39;\/go\/shanshuiyun\/&#39;)&#34; style=&#34;cursor: pointer; font-size: 1.35rem; font-weight: 800; font-family: var(--font-mono); color: #fff; background: rgba(0,0,0,0.5); padding: 3px 12px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); transition: all 0.2s;&#34; title=&#34;点击复制优惠码&#34;&gt;&#xA;        待核实 &lt;span style=&#34;font-size: 0.75rem; color: var(--color-accent); font-weight: normal;&#34;&gt;📋点击复制&lt;/span&gt;&#xA;      &lt;/span&gt;&#xA;      &lt;span style=&#34;font-size: 0.88rem; color: var(--text-secondary);&#34;&gt;旧资料暂无优惠码&lt;/span&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;  &#xA;    &lt;button onclick=&#34;copyCoupon(&#39;待核实&#39;, &#39;\/go\/shanshuiyun\/&#39;)&#34; class=&#34;btn btn-primary&#34; style=&#34;font-size: 0.9rem;&#34;&gt;&#xA;      一键复制并前往官网 ↗&#xA;    &lt;/button&gt;&#xA;  &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;noc-warning-banner&#34;&gt;&#xA;  &lt;div class=&#34;noc-warning-title&#34;&gt;&#xA;    &lt;span&gt;⚠️&lt;/span&gt; 传输协议尚未完全公开与历史测速延迟偏高警示&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;noc-warning-body&#34;&gt;&#xA;    山水云在历史整理中缺乏明确的协议技术规格记录（Shadowsocks/VLESS 混提），且在 2026-06-29 历史测速中，美国节点延迟高达 349ms、日本 229ms、香港 151ms，整体延迟显著高于行业平均专线水准。不适合实时竞技外服游戏或极速 AI 对话场景。&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-物理网络拓扑与站群背景深度溯源&#34;&gt;2. 物理网络拓扑与站群背景深度溯源&lt;/h2&gt;&#xA;&lt;p&gt;在考量 山水云 的网络质量时，必须理解其所属的技术流派与站群关联：&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

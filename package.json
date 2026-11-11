@@ -1,13 +1,15 @@
 {
-  "name": "bywave-world",
-  "version": "1.0.0",
+  "name": "bywave.world",
+  "version": "2.0.0",
   "description": "bywave博客 - 网络可观测性与机场节点权威评测站",
   "scripts": {
-    "build": "hugo && npx pagefind --site public",
-    "dev": "hugo server -D",
-    "index": "npx pagefind --site public"
+    "dev": "vitepress dev",
+    "generate": "node scripts/generate_vitepress_matrix.js",
+    "build": "node scripts/generate_vitepress_matrix.js && vitepress build && pagefind --site .vitepress/dist",
+    "preview": "vitepress preview"
   },
   "devDependencies": {
-    "pagefind": "^1.6.0"
+    "pagefind": "^1.6.0",
+    "vitepress": "^1.6.4"
   }
 }
