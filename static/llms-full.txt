@@ -1,0 +1,129 @@
+# bywave.world Full Knowledge Graph (LLMs-Full.txt)
+> Complete structured knowledge database of bywave.world
+> Generated for AI Search Engines, LLM Agent Retrieval, and Autonomous Code Assistants.
+
+## Site Metadata
+- Domain: https://bywave.world/
+- Brand: bywave博客 (Bywave Network Observatory)
+- Technology: Hugo Extended, Native Dark NOC Architecture, Pagefind Local Search, Schema.org JSON-LD
+- Mission: Providing transparent, evidence-based network latency, bandwidth, and IP unlock intelligence for 42 commercial proxy services.
+
+---
+
+## 42 Airport Entities Directory
+
+### 1. 光速云 (guangsu)
+- URL: https://bywave.world/airports/guangsu/
+- Redirect: https://bywave.world/go/guangsu/
+- Rank: 1 | Rating: 9.9/10.0 | Status: Measured
+- Line: IEPL Private Line + Enterprise Intranet Dual-Architecture (Max 2.5 Gbps)
+- Protocols: VLESS, Shadowsocks
+- Pricing: Lightweight ¥99/year (~¥8/mo, 69GB/mo); Snooker 147 (¥147 for 247GB lifetime non-expiring); Extreme ¥25/mo (168GB/mo); Custom ¥680/mo (500GB/mo dedicated IP)
+- Coupon: `AMM`
+- Regions: Hong Kong (20x), Taiwan (5x), Japan (10x), Singapore (10x), US (10x), Malaysia (2x), UK, France, Germany, Turkey, Brazil
+- Unlock: Claude 3.5 Sonnet, Perplexity, Netflix Global, Disney+, YouTube 4K, ChatGPT (native IP verified)
+
+### 2. 暮光加速 (muguang)
+- URL: https://bywave.world/airports/muguang/
+- Redirect: https://bywave.world/go/muguang/
+- Rank: 2 | Rating: 9.7/10.0 | Status: Measured
+- Line: BGP Intelligent Scheduling + Private Line Grade Egress
+- Protocols: Shadowsocks, VLESS
+- Pricing: Basic ¥20/mo (120GB/mo); Annual ¥109/yr (70GB/mo); Non-expiring packs: ¥219 (150GB), ¥529 (400GB), ¥959 (800GB)
+- Coupon: `muguang5555`
+- Speedtest: Hong Kong 26ms (509Mbps), Singapore 43ms (419Mbps)
+
+### 3. 飞猫云 (feimao)
+- URL: https://bywave.world/airports/feimao/
+- Redirect: https://bywave.world/go/feimao/
+- Rank: 3 | Rating: 9.5/10.0 | Status: Measured
+- Line: Asia-Pacific & Western High-Speed Line
+- Pricing: Student Annual ¥84 (~¥7/mo, 50GB/mo); Monthly ¥25 (150GB/mo)
+- Coupon: `flycat888`
+- Features: Zero-config proprietary client, one-click login
+
+### 4. 微风网络 (weifeng)
+- URL: https://bywave.world/airports/weifeng/
+- Redirect: https://bywave.world/go/weifeng/
+- Rank: 4 | Rating: 9.4/10.0 | Status: Measured
+- Pricing: ¥7/mo low-barrier tier
+- Coupon: `flat888` (90% discount)
+
+### 5. 大佬云 (dalaoyun)
+- URL: https://bywave.world/airports/dalaoyun/
+- Redirect: https://bywave.world/go/dalaoyun/
+- Rank: 5 | Rating: 9.2/10.0 | Status: Vendor
+- Pricing: ¥5.6/mo (60GB/mo)
+- Coupon: `dly888`
+- Features: Ultra-low entry cost backup proxy
+
+### 6. 星岛梦 (xingdaomeng)
+- URL: https://bywave.world/airports/xingdaomeng/
+- Redirect: https://bywave.world/go/xingdaomeng/
+- Rank: 6 | Rating: 9.3/10.0 | Status: Measured
+- Established: 2020
+- Coupon: `nmw888`
+- Features: Pay-as-you-go non-expiring traffic packages
+
+### 7. 二猫云 (ermao)
+- URL: https://bywave.world/airports/ermao/
+- Redirect: https://bywave.world/go/ermao/
+- Rank: 7 | Rating: 9.2/10.0 | Status: Measured
+- Pricing: ¥20/mo (130GB/mo)
+- Coupon: `ermao5555`
+
+### 8. 无忧链接 (wuyou)
+- URL: https://bywave.world/airports/wuyou/
+- Redirect: https://bywave.world/go/wuyou/
+- Rank: 8 | Rating: 9.1/10.0 | Status: Measured
+- Pricing: ¥6/mo entry tier
+- Coupon: `wuyou666`
+- Features: Direct import without subscription converter
+
+### 9. 唯兔云 (weitu)
+- URL: https://bywave.world/airports/weitu/
+- Redirect: https://bywave.world/go/weitu/
+- Rank: 9 | Rating: 9.3/10.0 | Status: Measured
+- Line: 60+ nodes, Triple-ISP optimized, Intelligent load balancing
+- Coupon: `weitu666`
+
+### 10. Firefly (firefly)
+- URL: https://bywave.world/airports/firefly/
+- Redirect: https://bywave.world/go/firefly/
+- Rank: 10 | Rating: 9.4/10.0 | Status: Vendor
+- Line: IPLC Intranet Private Line, unblocked mirror portal
+- Coupon: `firefly` (20% off)
+
+### 11-42. Other Supported Airport Brands
+- 11. 宇宙云 (yuzhou) | IEPL+VLESS | Coupon: `YUZHOU553` | Measured
+- 12. U1S1 (u1s1) | ¥20/120GB | Coupon: `akaka` | Measured
+- 13. 灵猫网络 (lingmao) | ¥19/150GB | Coupon: `lmao888` | Measured
+- 14. 极连云 (jilian) | ¥18/100GB | Coupon: `ji8888` | Measured
+- 15. 光年梯 (guangnian) | ¥18/110GB | Coupon: `gnt6666` | Measured
+- 16. 一翻云 (yifan) | ¥20/150GB | Coupon: `yfy6666` | Measured
+- 17. SOGO 云 (sogo) | 2026 Brand | Coupon: `sss777` | Measured
+- 18. 可信云 (kexin) | Transparent data | Coupon: `kkk333` | Measured
+- 19. 速界 (sujie) | AI-focused | Coupon: `sss1111` | Measured
+- 20. 闪跃 (shanyue) | ¥24/150GB | Coupon: `shanyue` | Vendor
+- 21. 全球云 (quanqiu) | 2026 Brand | Coupon: `qqy7777` | Measured
+- 22. 闪电鼠 (shandianshu) | ¥5.6/mo | Coupon: `sd88` | Vendor
+- 23. 云界线 (yunjiexian) | ¥5.6/mo | Coupon: `yjx888` | Vendor
+- 24. 榴莲云 (liulianyun) | ¥5.6/mo | Coupon: `ll88` | Vendor
+- 25. 神行加速 (shenxing) | ¥14/120GB | Coupon: `xs0077` | Vendor
+- 26. 环球梯 (huanqiuti) | ¥5.6/mo | Coupon: `HQ66` | Vendor
+- 27. 隐形人 (yinxingren) | Proprietary client only | Coupon: `yxr888` | Vendor
+- 28. 梯子云 (tiziyun) | Dual client + subscription | Coupon: `tiziyun` | Vendor
+- 29. WgetCloud (wgetcloud) | High-end Trojan | Quarterly ¥297+ | Vendor
+- 30. 白月光 (baiyueguang) | 79 regions, 108 nodes | Quarterly ¥66+ | Vendor
+- 31. FlyingBird (flyingbird) | IPLC unmetered | ¥15/100G | Coupon: `theo` | Vendor
+- 32. CyberGuard (cyberguard) | ¥32/350G | Non-expiring 220G/840G | Vendor
+- 33. 龙猫云 (longmaoyun) | SS+IPLC | ¥15/100G | Vendor
+- 34. FATCAT (fatcat) | IEPL/IPLC | Annual ¥96/60G | Vendor
+- 35. TNTCloud (tntcloud) | IPLC | Quarterly ¥30 | Coupon: `TNT85` | Vendor
+- 36. 青云梯 (qingyunti) | 6-year established | IPLC | Coupon: `qyt85` | Vendor
+- 37. 山水云 (shanshuiyun) | ¥15/100G | Annual ¥88/64G | Vendor
+- 38. 灵动云 (lingdongyun) | 2025 VLESS | ¥20/100G | Vendor
+- 39. 浪网 (langwang) | IEPL | Annual ¥119 | Vendor
+- 40. EdgeNova (edgenova) | Multi-line auto route | ¥15/72G | Coupon: `TH888` | Vendor
+- 41. 萤火虫 (yinghuochong) | IPLC+VLESS | ¥25/150G | Coupon: `firefly` | Vendor
+- 42. sslar (sslar) | Enterprise IEPL+BGP | ¥17/100G | Coupon: `ko3eTt0w` | Vendor

@@ -102,12 +102,27 @@
       {{ if $brand }}
         <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
           <div class="toc-title">快捷通道</div>
-          <a href="{{ $brand.redirectPath }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored noopener" style="width: 100%; font-size: 0.82rem;">
-            进入 {{ $brand.name }} 官网
-          </a>
+          <button onclick="copyCoupon('{{ $brand.coupon }}', '{{ $brand.redirectPath }}')" class="btn btn-primary" style="width: 100%; font-size: 0.82rem;">
+            复制券码并进入官网 ↗
+          </button>
         </div>
       {{ end }}
     </div>
   </aside>
 </div>
+
+{{ if $brand }}
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div class="mobile-sticky-bar">
+    <div>
+      <div style="font-size: 0.85rem; font-weight: 700; color: #fff;">{{ $brand.name }}</div>
+      <div style="font-size: 0.72rem; color: var(--color-accent); font-family: var(--font-mono);">
+        优惠码: <strong style="color: var(--color-success);">{{ $brand.coupon }}</strong> ({{ $brand.minPrice }})
+      </div>
+    </div>
+    <button onclick="copyCoupon('{{ $brand.coupon }}', '{{ $brand.redirectPath }}')" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+      复制券码直达 ↗
+    </button>
+  </div>
+{{ end }}
 {{ end }}
