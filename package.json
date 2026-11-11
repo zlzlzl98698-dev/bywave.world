@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "vitepress dev",
     "favicons": "node scripts/generate_favicons.js",
-    "generate": "node scripts/generate_favicons.js && node scripts/generate_vitepress_matrix.js",
-    "build": "node scripts/generate_favicons.js && node scripts/generate_vitepress_matrix.js && vitepress build && pagefind --site .vitepress/dist",
+    "generate": "node scripts/generate_favicons.js && node scripts/generate_vitepress_matrix.js && node scripts/generate_six_mega_topics.js",
+    "build": "node scripts/generate_favicons.js && node scripts/generate_vitepress_matrix.js && node scripts/generate_six_mega_topics.js && vitepress build && pagefind --site .vitepress/dist",
     "preview": "vitepress preview"
   },
   "devDependencies": {
     "pagefind": "^1.6.0",
+    "to-ico": "^1.1.5",
     "vitepress": "^1.6.4"
   },
   "dependencies": {

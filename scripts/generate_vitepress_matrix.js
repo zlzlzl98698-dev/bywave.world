@@ -146,57 +146,10 @@ features:
 }
 
 // -----------------------------------------------------------------------------
-// 2. Generate Airport Hub (airports/index.md)
+// 2. Generate Airport Hub (airports/index.md) - 万字级权威支柱页
 // -----------------------------------------------------------------------------
 function generateAirportsIndex() {
-  const content = `---
-title: "42 家主流机场品牌权威实测库与全景矩阵 (2026 最新版)"
-description: "bywave 博客收录并持续追踪的 42 家机场品牌评测知识图谱。基于网络可观测性实验室实测，涵盖 IEPL/IPLC 专线、晚高峰测速、原生 IP 解锁、资费明细与专属优惠码。"
----
-
-# 42 家主流机场品牌权威实测库与全景矩阵
-
-在复杂的跨境网络环境中，商业代理服务（俗称“机场”）的质量与稳定性存在巨大差异。大量推广站点充斥着毫无技术根据的虚假背书与夸张广告。**bywave 博客** 坚持技术可观测性与真实可核验性，建立了完整的品牌数据库与评测标准。
-
-<CouponCard
-  code="AMM"
-  desc="光速云专属优惠码，折算入门低至 8 元/月"
-  url="/go/guangsu/"
-/>
-
----
-
-## 42 家机场实时多维筛选器
-
-<AirportFilter />
-
----
-
-## 品牌收录原则与评测方法论
-
-1. **实测证据与官方数据明确标识**：具备独立测速图、拓扑图与解锁截图的品牌标注 \`🟢 Measured Data\`；依据官方公开文档整理的标注 \`🔵 Vendor Baseline\`，严禁编造亲自使用经历。
-2. **拒绝绝对化承诺**：不承诺特定 AI 平台（如 ChatGPT、Claude）的永久收录或 100% 绝对解锁，对晚高峰节点波动与风控限制进行客观披露。
-3. **分层技术审计**：重点考察接入层（国内 BGP 多线入口）、跨境传输层（IEPL/IPLC 物理专线 vs 公网隧道）与境外落地层（原生住宅 IP vs 机房广播 IP）。
-4. **透明推荐与合规重定向**：全站所有推广外链统一采用 \`/go/:slug/\` 内部安全重定向通道，并明确标注包含推广分成，绝不影响用户实际支付金额。
-
----
-
-## 42 家机场核心规格与价格对比总表
-
-| 序号 | 品牌名称 | 线路架构 | 支持协议 | 入门价格 | 设备限制 | 评测状态 | 深度评测报告 |
-|:---:|:---|:---|:---|:---:|:---:|:---:|:---:|
-${brands.map(b => `| ${b.rank} | **${b.name}** ${b.isMainPush ? '⭐' : ''} | ${b.lineType} | ${(b.protocols || []).join('/') || 'SS'} | ${b.minPrice} | ${b.deviceLimit} | ${b.dataStatus === 'measured' ? '🟢 实测归档' : '🔵 官方基准'} | [阅读深度评测](/airports/${b.slug}) |`).join('\n')}
-
----
-
-## 机场评测二级专题导航
-
-- [💎 旗舰高奢与企业专线评测](/airports/premium/)：聚焦 IEPL/IPLC 物理专线、晚高峰零丢包、独享原生 IP 与企业级 SLA 保障。
-- [💰 平价高性价比与轻量备用评测](/airports/budget/)：涵盖百元年付、不限时永久流量包、学生党 10 元档与多机场主备容灾方案。
-`;
-
-  fs.writeFileSync(path.join(ROOT_DIR, 'airports', 'index.md'), content, 'utf8');
-  console.log('Generated airports/index.md');
+  require('./topics/airports_pillar.js').generate(ROOT_DIR, brands);
 }
 
 // -----------------------------------------------------------------------------
@@ -731,8 +684,11 @@ ${pillar.topics.map(t => `| **${t.name}** | ${t.desc} | 10 个集群 | 100 篇�
 - 探索其它核心栏目：[专线网络拓扑](/lines/) · [全平台客户端指南](/clients/) · [流媒体与 AI 解锁](/unlock/) · [科学上网协议](/protocols/) · [选型避坑指南](/guides/)
 `;
 
-    fs.writeFileSync(path.join(ROOT_DIR, pillar.slug, 'index.md'), pillarIndexContent, 'utf8');
-    console.log(`Generated pillar L1: ${pillar.slug}/index.md`);
+    // Skip overwriting airports/index.md because it has its dedicated 10,000+ words pillar
+    if (pillar.slug !== 'airports') {
+      fs.writeFileSync(path.join(ROOT_DIR, pillar.slug, 'index.md'), pillarIndexContent, 'utf8');
+      console.log(`Generated pillar L1: ${pillar.slug}/index.md`);
+    }
 
     // 2. Generate L2 Topic Pages & L3 Standalone Article Markdown Files
     pillar.topics.forEach(topic => {

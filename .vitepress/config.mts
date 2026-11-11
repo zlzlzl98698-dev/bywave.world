@@ -5,16 +5,17 @@ export default defineConfig({
   description: '网络可观测性与机场节点权威评测站 | 2026 深度实测与全网选型指南',
   lang: 'zh-CN',
   cleanUrls: true,
+  ignoreDeadLinks: true,
   srcExclude: ['**/README.md', '**/TODO.md'],
   sitemap: {
     hostname: 'https://bywave.world'
   },
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=2026' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=2026' }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2026' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico?v=2026' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=2026' }],
     ['meta', { name: 'author', content: 'bywave博客' }],
     ['meta', { name: 'keywords', content: '机场推荐, 机场评测, 光速云, 暮光加速, 飞猫云, IEPL专线, IPLC专线, 科学上网, 翻墙机场, Clash教程, Shadowrocket, ChatGPT解锁, 跨境电商网络, 节点测速' }],
     ['meta', { property: 'og:site_name', content: 'bywave博客' }],
@@ -39,14 +40,83 @@ export default defineConfig({
     siteTitle: 'bywave博客',
     logo: '/logo.png',
     nav: [
-      { text: '机场评测库', link: '/airports/' },
-      { text: '专线与拓扑', link: '/lines/' },
-      { text: '客户端指南', link: '/clients/' },
-      { text: '流媒体与AI', link: '/unlock/' },
-      { text: '协议底层', link: '/protocols/' },
-      { text: '场景与避坑', link: '/guides/' }
+      { text: '机场推荐', link: '/recommend/' },
+      { text: '深度评测', link: '/airports/' },
+      { text: '免费试用', link: '/trial/' },
+      { text: '免费节点', link: '/free-nodes/' },
+      { text: '跑路预警', link: '/alerts/' },
+      { text: '机场FAQ', link: '/faq/' },
+      {
+        text: '技术专栏',
+        items: [
+          { text: '专线拓扑', link: '/lines/' },
+          { text: '客户端指南', link: '/clients/' },
+          { text: '流媒体与AI', link: '/unlock/' },
+          { text: '协议底层', link: '/protocols/' },
+          { text: '场景选型', link: '/guides/' }
+        ]
+      }
     ],
     sidebar: {
+      '/recommend/': [
+        {
+          text: '42 家翻墙机场推荐矩阵',
+          items: [
+            { text: '🏆 42 家综合推荐天梯榜', link: '/recommend/' },
+            { text: '💰 平价性价比推荐 (10元/学生党)', link: '/recommend/budget/' },
+            { text: '💎 旗舰专线推荐 (IEPL/零丢包)', link: '/recommend/premium/' },
+            { text: '⏳ 不限时按量计费推荐 (永久包)', link: '/recommend/ondemand/' },
+            { text: '💼 跨境电商出海推荐 (原生IP)', link: '/recommend/business/' }
+          ]
+        }
+      ],
+      '/free-nodes/': [
+        {
+          text: '免费节点专题白皮书',
+          items: [
+            { text: '🆓 免费翻墙节点全景测评', link: '/free-nodes/' },
+            { text: '📡 公开 Clash/v2ray 订阅源解析', link: '/free-nodes/subscriptions/' },
+            { text: '⚠️ 蜜罐劫持与隐私窃取曝光', link: '/free-nodes/security/' },
+            { text: '💡 白嫖自建与低价专线替代', link: '/free-nodes/transition/' }
+          ]
+        }
+      ],
+      '/faq/': [
+        {
+          text: '科学上网 100 问权威百科',
+          items: [
+            { text: '❓ 机场 100 问全景索引', link: '/faq/' },
+            { text: '🔌 节点报错与断网排查 (Timeout/Ping-1)', link: '/faq/errors/' },
+            { text: '🎬 流媒体与 ChatGPT/Claude 解锁', link: '/faq/streaming-ai/' },
+            { text: '💳 资费套餐与退款维权', link: '/faq/billing-refund/' },
+            { text: '⚙️ 客户端分流与开机断网自救', link: '/faq/clients-system/' }
+          ]
+        }
+      ],
+      '/alerts/': [
+        {
+          text: '机场跑路预警与风险识别',
+          items: [
+            { text: '🚨 跑路风险预警模型总览', link: '/alerts/' },
+            { text: '⚠️ 跑路前夕七大高危征兆', link: '/alerts/signs/' },
+            { text: '🔍 虚假专线与内网刷测速曝光', link: '/alerts/frauds/' },
+            { text: '⚖️ 跑路后支付争议维权追回', link: '/alerts/chargeback/' },
+            { text: '📜 历史跑路机场案例库复盘', link: '/alerts/blacklist/' }
+          ]
+        }
+      ],
+      '/trial/': [
+        {
+          text: '免费试用与 1 元体验矩阵',
+          items: [
+            { text: '🎁 免费试用测评总览', link: '/trial/' },
+            { text: '🆓 真·零元免绑卡试用精选', link: '/trial/zero-dollar/' },
+            { text: '🪙 1 元超小额体验包合集', link: '/trial/one-yuan/' },
+            { text: '🕳️ 试用期套路与扣费猫腻防范', link: '/trial/traps/' },
+            { text: '🛡️ 24 小时无理由退款保障机场', link: '/trial/money-back/' }
+          ]
+        }
+      ],
       '/airports/': [
         {
           text: '机场评测与矩阵导航',
