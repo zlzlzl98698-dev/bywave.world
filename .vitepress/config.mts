@@ -11,11 +11,11 @@ export default defineConfig({
     hostname: 'https://bywave.world'
   },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=2026' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=2026' }],
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2026' }],
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico?v=2026' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=2026' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=4' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=4' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=4' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico?v=4' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=4' }],
     ['meta', { name: 'author', content: 'bywave博客' }],
     ['meta', { name: 'keywords', content: '机场推荐, 机场评测, 光速云, 暮光加速, 飞猫云, IEPL专线, IPLC专线, 科学上网, 翻墙机场, Clash教程, Shadowrocket, ChatGPT解锁, 跨境电商网络, 节点测速' }],
     ['meta', { property: 'og:site_name', content: 'bywave博客' }],

@@ -61,34 +61,34 @@ features:
 
 <div class="features">
   <div class="feature">
-    <h3>📊 1. 机场评测与推荐矩阵</h3>
-    <p>深度追踪 42 家机场品牌，拆解资费方案、晚高峰吞吐与避坑指南。</p>
-    <p><a href="/airports/premium/">💎 旗舰高奢与企业专线</a> · <a href="/airports/budget/">💰 平价高性价比与轻量备用</a></p>
+    <h3>📊 1. 42 家机场推荐矩阵</h3>
+    <p>横向分类横评与选型推荐，精准匹配个人、出海与预算场景。</p>
+    <p><a href="/recommend/budget/">💰 平价高性价比</a> · <a href="/recommend/premium/">💎 高端稳定专线</a> · <a href="/recommend/ondemand/">⏳ 不限时按量</a> · <a href="/recommend/business/">💼 出海商务</a></p>
   </div>
   <div class="feature">
-    <h3>⚡ 2. 专线网络与底层拓扑</h3>
-    <p>剖析 IEPL/IPLC 跨境专线传输机理、骨干网 BGP 调度与抗 QoS 策略。</p>
-    <p><a href="/lines/dedicated/">⚡ 物理内网跨境专线技术</a> · <a href="/lines/transit/">🔀 骨干中转调度与公网直连</a></p>
+    <h3>🔬 2. 42 家深度机场评测</h3>
+    <p>42 家主流机场全覆盖实测，真实晚高峰测速、专线拓扑与原生解锁。</p>
+    <p><a href="/airports/guangsu">🥇 光速云深度评测</a> · <a href="/airports/muguang">🥈 暮光加速实测</a> · <a href="/airports/">📋 42 家评测总览</a></p>
   </div>
   <div class="feature">
-    <h3>📱 3. 跨平台客户端指南</h3>
-    <p>Clash Verge Rev、小火箭、Sing-box、v2rayN 安装、规则分流与调优。</p>
-    <p><a href="/clients/desktop/">💻 桌面端调优 (Win/Mac)</a> · <a href="/clients/mobile/">📱 移动端实操 (iOS/Android)</a></p>
+    <h3>🎁 3. 免费试用与 1 元体验</h3>
+    <p>真零元免绑卡试用精选、1 元超小额体验包与试用期防扣费避坑指南。</p>
+    <p><a href="/trial/free/">🆓 零元免绑卡精选</a> · <a href="/trial/low-cost/">🪙 1元超小额体验</a> · <a href="/trial/testing/">⚠️ 避坑猫腻防范</a> · <a href="/trial/upgrade/">🛡️ 24h退款保障</a></p>
   </div>
   <div class="feature">
-    <h3>🎬 4. 流媒体与 AI 原生解锁</h3>
-    <p>ChatGPT (GPT-4o)、Claude 3.5、Netflix 4K HDR 原生 IP 洁净度实测。</p>
-    <p><a href="/unlock/streaming/">🍿 海外流媒体全区解锁矩阵</a> · <a href="/unlock/ai/">🤖 大模型原生纯净节点方案</a></p>
+    <h3>🌐 4. 免费节点与应急过渡</h3>
+    <p>每日更新公开免费节点源、隐私安全风险剖析与免费vs付费横评。</p>
+    <p><a href="/free-nodes/daily/">📅 每日更新节点</a> · <a href="/free-nodes/security/">🚨 安全与隐私陷阱</a> · <a href="/free-nodes/vs-paid/">⚖️ 免费vs付费横评</a> · <a href="/free-nodes/fallback/">🛟 应急过渡指南</a></p>
   </div>
   <div class="feature">
-    <h3>🔒 5. 科学上网协议与底层安全</h3>
-    <p>VLESS、XTLS-Reality、Hysteria 2、TUIC v5、Trojan 传输协议底层解析。</p>
-    <p><a href="/protocols/modern/">🚀 新一代现代代理协议</a> · <a href="/protocols/classic/">🛡️ 经典加密协议与反封锁</a></p>
+    <h3>🚨 5. 跑路预警与防坑维权</h3>
+    <p>机场跑路前 7 大危险信号监测、大额多年付圈钱套路曝光与维权退款指南。</p>
+    <p><a href="/alerts/signs/">⚠️ 跑路前兆特征</a> · <a href="/alerts/traps/">🪤 假促销套路曝光</a> · <a href="/alerts/recovery/">🚑 突发跑路紧急自救</a> · <a href="/alerts/survival/">⚖️ 支付维权申诉</a></p>
   </div>
   <div class="feature">
-    <h3>🧭 6. 场景选型与避坑保障</h3>
-    <p>跨境电商防关联、TikTok 出海、游戏加速选型与跑路维权防范指南。</p>
-    <p><a href="/guides/business/">💼 专业与出海业务方案</a> · <a href="/guides/security/">🚨 机场消费避坑与防跑路</a></p>
+    <h3>💡 6. 机场进阶 FAQ 问答库</h3>
+    <p>连接超时与速度慢 8 步排查、ChatGPT/Netflix 解锁与支付避坑百科。</p>
+    <p><a href="/faq/basics/">📖 协议与原理解密</a> · <a href="/faq/troubleshooting/">🔧 连接超时故障排障</a> · <a href="/faq/streaming/">🍿 AI与流媒体问答</a> · <a href="/faq/billing/">💳 支付避坑百科</a></p>
   </div>
 </div>
 
