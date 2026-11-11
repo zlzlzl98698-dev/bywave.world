@@ -72,36 +72,37 @@ export default defineConfig({
       ],
       '/free-nodes/': [
         {
-          text: '免费节点专题白皮书',
+          text: '免费节点专题全景白皮书',
           items: [
-            { text: '🆓 免费翻墙节点全景测评', link: '/free-nodes/' },
-            { text: '📡 公开 Clash/v2ray 订阅源解析', link: '/free-nodes/subscriptions/' },
-            { text: '⚠️ 蜜罐劫持与隐私窃取曝光', link: '/free-nodes/security/' },
-            { text: '💡 白嫖自建与低价专线替代', link: '/free-nodes/transition/' }
+            { text: '🆓 免费节点全景解析与风险防范', link: '/free-nodes/' },
+            { text: '📡 每日公共节点聚合池更新机制', link: '/free-nodes/daily/' },
+            { text: '🛡️ 免费节点安全准则与风险防范', link: '/free-nodes/security/' },
+            { text: '⚖️ 免费节点与付费专线全方位对比', link: '/free-nodes/vs-paid/' },
+            { text: '🚨 应急备用方案与低成本过渡指南', link: '/free-nodes/fallback/' }
           ]
         }
       ],
       '/faq/': [
         {
-          text: '科学上网 100 问权威百科',
+          text: '科学上网终极百科全景 FAQ',
           items: [
-            { text: '❓ 机场 100 问全景索引', link: '/faq/' },
-            { text: '🔌 节点报错与断网排查 (Timeout/Ping-1)', link: '/faq/errors/' },
-            { text: '🎬 流媒体与 ChatGPT/Claude 解锁', link: '/faq/streaming-ai/' },
-            { text: '💳 资费套餐与退款维权', link: '/faq/billing-refund/' },
-            { text: '⚙️ 客户端分流与开机断网自救', link: '/faq/clients-system/' }
+            { text: '📖 科学上网终极百科全景索引', link: '/faq/' },
+            { text: '💡 入门基础认知与专线中转原理', link: '/faq/basics/' },
+            { text: '🛠️ 客户端高频报错与网络排障', link: '/faq/troubleshooting/' },
+            { text: '🎬 流媒体与生成式 AI 解锁指南', link: '/faq/streaming/' },
+            { text: '💳 资费购买、退款与资金避坑', link: '/faq/billing/' }
           ]
         }
       ],
       '/alerts/': [
         {
-          text: '机场跑路预警与风险识别',
+          text: '机场跑路预警雷达与黑名单',
           items: [
-            { text: '🚨 跑路风险预警模型总览', link: '/alerts/' },
-            { text: '⚠️ 跑路前夕七大高危征兆', link: '/alerts/signs/' },
-            { text: '🔍 虚假专线与内网刷测速曝光', link: '/alerts/frauds/' },
-            { text: '⚖️ 跑路后支付争议维权追回', link: '/alerts/chargeback/' },
-            { text: '📜 历史跑路机场案例库复盘', link: '/alerts/blacklist/' }
+            { text: '🚨 跑路预警雷达模型总览', link: '/alerts/' },
+            { text: '🔍 跑路前兆识别与高危信号监测', link: '/alerts/signs/' },
+            { text: '⚠️ 虚假宣传套路与黑心商家避坑', link: '/alerts/traps/' },
+            { text: '🛡️ 遭遇跑路损失挽回与应急自救', link: '/alerts/recovery/' },
+            { text: '⚓ 长期稳定生存指南与双机场容灾', link: '/alerts/survival/' }
           ]
         }
       ],
@@ -109,11 +110,11 @@ export default defineConfig({
         {
           text: '免费试用与 1 元体验矩阵',
           items: [
-            { text: '🎁 免费试用测评总览', link: '/trial/' },
-            { text: '🆓 真·零元免绑卡试用精选', link: '/trial/zero-dollar/' },
-            { text: '🪙 1 元超小额体验包合集', link: '/trial/one-yuan/' },
-            { text: '🕳️ 试用期套路与扣费猫腻防范', link: '/trial/traps/' },
-            { text: '🛡️ 24 小时无理由退款保障机场', link: '/trial/money-back/' }
+            { text: '🎁 免费试用与低成本测速总览', link: '/trial/' },
+            { text: '🆓 0 元完全无门槛试用机场精选', link: '/trial/free/' },
+            { text: '💰 1 元与极低门槛防刷体验包盘点', link: '/trial/low-cost/' },
+            { text: '🔬 试用期专业测速与环境可观测性', link: '/trial/testing/' },
+            { text: '📈 试用到付费升级理性决策指南', link: '/trial/upgrade/' }
           ]
         }
       ],
