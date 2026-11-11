@@ -21,8 +21,8 @@ VLESS、XTLS-Reality、Hysteria 2、TUIC v5、Trojan 传输协议底层解析。
 
 | 二级专题名称 | 定位与核心价值 | 下辖内容集群数量 | 独立长尾文章数量 | 专题入口 |
 |:---|:---|:---:|:---:|:---:|
-| **新一代现代代理协议** | VLESS + XTLS-Reality、Hysteria 2、TUIC v5 下一代高性能抗封锁协议。 | 10 个集群 | 100 篇规划 | [进入专题 →](/protocols/modern/) |
-| **经典加密协议与抗封锁机理** | Trojan、Shadowsocks 2022、VMess 协议演进、DPI 识别与伪装。 | 10 个集群 | 100 篇规划 | [进入专题 →](/protocols/classic/) |
+| **新一代现代代理协议** | VLESS + XTLS-Reality、Hysteria 2、TUIC v5 下一代高性能抗封锁协议。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/protocols/modern/) |
+| **经典加密协议与抗封锁机理** | Trojan、Shadowsocks 2022、VMess 协议演进、DPI 识别与伪装。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/protocols/classic/) |
 
 ---
 

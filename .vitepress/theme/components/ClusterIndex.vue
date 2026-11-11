@@ -20,7 +20,11 @@
           <div class="topics-title">🎯 独立搜索价值文章标题与长尾词映射（全量规划）：</div>
           <ol class="topic-items">
             <li v-for="(art, aIdx) in c.articles" :key="aIdx" class="topic-item">
-              <span class="art-title"><strong>{{ art.title }}</strong></span>
+              <a :href="art.url" class="art-title-link">
+                <span class="art-num">{{ aIdx + 1 }}.</span>
+                <span class="art-title-text">{{ art.title }}</span>
+                <span class="read-arrow">阅读全文 →</span>
+              </a>
               <div class="art-meta">
                 <span class="art-intent">意图：{{ art.intent }}</span>
                 <span class="art-kw">关键词：<code>{{ art.keyword }}</code></span>
@@ -137,9 +141,40 @@ defineProps({
   color: #1e293b;
   line-height: 1.4;
 }
-.art-title {
-  display: block;
+.art-title-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
   color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  line-height: 1.45;
+}
+.art-title-link:hover {
+  color: #2563eb;
+  transform: translateX(2px);
+}
+.art-num {
+  color: #2563eb;
+  font-family: ui-monospace, monospace;
+}
+.art-title-text {
+  border-bottom: 1px dashed #cbd5e1;
+}
+.art-title-link:hover .art-title-text {
+  border-bottom-color: #2563eb;
+}
+.read-arrow {
+  font-size: 0.78rem;
+  color: #2563eb;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.8;
+  margin-left: 0.25rem;
+}
+.art-title-link:hover .read-arrow {
+  opacity: 1;
 }
 .art-meta {
   display: flex;

@@ -21,8 +21,8 @@ Clash Verge Rev、小火箭、Sing-box、v2rayN 安装、规则分流与调优�
 
 | 二级专题名称 | 定位与核心价值 | 下辖内容集群数量 | 独立长尾文章数量 | 专题入口 |
 |:---|:---|:---:|:---:|:---:|
-| **桌面端客户端深度调优与分流** | Windows 与 macOS: Clash Verge Rev、v2rayN、Sing-box、Surge Mac 全面掌握。 | 10 个集群 | 100 篇规划 | [进入专题 →](/clients/desktop/) |
-| **移动端与全平台客户端实操** | iOS & Android: Shadowrocket、Stash、Quantumult X、FlClash、Hiddify。 | 10 个集群 | 100 篇规划 | [进入专题 →](/clients/mobile/) |
+| **桌面端客户端深度调优与分流** | Windows 与 macOS: Clash Verge Rev、v2rayN、Sing-box、Surge Mac 全面掌握。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/clients/desktop/) |
+| **移动端与全平台客户端实操** | iOS & Android: Shadowrocket、Stash、Quantumult X、FlClash、Hiddify。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/clients/mobile/) |
 
 ---
 

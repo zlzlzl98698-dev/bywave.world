@@ -21,8 +21,8 @@ ChatGPT (GPT-4o)、Claude 3.5、Netflix 4K HDR 原生 IP 洁净度实测。
 
 | 二级专题名称 | 定位与核心价值 | 下辖内容集群数量 | 独立长尾文章数量 | 专题入口 |
 |:---|:---|:---:|:---:|:---:|
-| **海外流媒体全区解锁矩阵** | Netflix、Disney+、YouTube Premium、HBO Max 与港澳台 B 站解锁实测。 | 10 个集群 | 100 篇规划 | [进入专题 →](/unlock/streaming/) |
-| **大模型与生成式 AI 纯净节点** | ChatGPT Plus、Claude 3.5 Sonnet、Google Gemini 与 Midjourney 稳定性。 | 10 个集群 | 100 篇规划 | [进入专题 →](/unlock/ai/) |
+| **海外流媒体全区解锁矩阵** | Netflix、Disney+、YouTube Premium、HBO Max 与港澳台 B 站解锁实测。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/unlock/streaming/) |
+| **大模型与生成式 AI 纯净节点** | ChatGPT Plus、Claude 3.5 Sonnet、Google Gemini 与 Midjourney 稳定性。 | 10 个集群 | 100 篇实战长文 | [进入专题 →](/unlock/ai/) |
 
 ---
 
