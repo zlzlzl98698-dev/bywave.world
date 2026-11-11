@@ -10,12 +10,14 @@ export default defineConfig({
     hostname: 'https://bywave.world'
   },
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.webp' }],
     ['meta', { name: 'author', content: 'bywave博客' }],
     ['meta', { name: 'keywords', content: '机场推荐, 机场评测, 光速云, 暮光加速, 飞猫云, IEPL专线, IPLC专线, 科学上网, 翻墙机场, Clash教程, Shadowrocket, ChatGPT解锁, 跨境电商网络, 节点测速' }],
     ['meta', { property: 'og:site_name', content: 'bywave博客' }],
     ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:image', content: 'https://bywave.world/logo.webp' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://bywave.world/logo.webp' }],
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
@@ -31,7 +33,7 @@ export default defineConfig({
   ],
   themeConfig: {
     siteTitle: 'bywave博客',
-    logo: '🌐',
+    logo: '/logo.webp',
     nav: [
       { text: '机场评测库', link: '/airports/' },
       { text: '专线与拓扑', link: '/lines/' },

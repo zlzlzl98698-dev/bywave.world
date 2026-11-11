@@ -47,6 +47,9 @@ hero:
   name: "bywave 博客"
   text: "网络可观测性与机场节点权威评测站"
   tagline: "深度实测 42 家主流机场 · 专线底层拓扑解析 · ChatGPT/Netflix 原生解锁矩阵 · 全平台客户端教程"
+  image:
+    src: /logo.webp
+    alt: bywave 博客
   actions:
     - theme: brand
       text: 探索 42 家机场评测库 →

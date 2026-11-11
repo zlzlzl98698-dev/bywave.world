@@ -46,6 +46,21 @@ body {
   color: #0f172a !important;
 }
 
+.VPNavBarTitle .logo {
+  height: 28px !important;
+  width: auto !important;
+  border-radius: 6px !important;
+  object-fit: cover !important;
+}
+
+.VPHero .image-src {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #e2e8f0 !important;
+  max-height: 280px !important;
+  object-fit: cover !important;
+}
+
 /* 标题样式增强 */
 .vp-doc h1 {
   font-size: 2.1rem !important;
