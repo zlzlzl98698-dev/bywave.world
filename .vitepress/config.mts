@@ -23,6 +23,14 @@ export default defineConfig({
     ['meta', { property: 'og:image', content: 'https://bywave.world/logo.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: 'https://bywave.world/logo.png' }]
+    // =========================================================================
+    // 搜索引擎站长平台所有权验证插槽 (上线时填入用户在各平台获取的真实 Token)
+    // 亦支持在 CI/CD 或环境变量中配置 GOOGLE_SITE_VERIFICATION 等变量自动注入
+    // =========================================================================
+    // ['meta', { name: 'google-site-verification', content: 'YOUR_GOOGLE_VERIFICATION_TOKEN' }],
+    // ['meta', { name: 'msvalidate.01', content: 'YOUR_BING_VERIFICATION_TOKEN' }],
+    // ['meta', { name: 'shenma-site-verification', content: 'YOUR_SHENMA_VERIFICATION_TOKEN' }],
+    // ['meta', { name: 'baidu-site-verification', content: 'YOUR_BAIDU_VERIFICATION_TOKEN' }],
   ],
   markdown: {
     config: (md) => {
@@ -52,12 +60,26 @@ export default defineConfig({
 
     const head: any[] = [
       ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
       ['meta', { property: 'og:url', content: canonicalUrl }],
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: desc }],
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: desc }]
     ];
+
+    if (process.env.GOOGLE_SITE_VERIFICATION) {
+      head.push(['meta', { name: 'google-site-verification', content: process.env.GOOGLE_SITE_VERIFICATION }]);
+    }
+    if (process.env.BING_SITE_VERIFICATION) {
+      head.push(['meta', { name: 'msvalidate.01', content: process.env.BING_SITE_VERIFICATION }]);
+    }
+    if (process.env.SHENMA_SITE_VERIFICATION) {
+      head.push(['meta', { name: 'shenma-site-verification', content: process.env.SHENMA_SITE_VERIFICATION }]);
+    }
+    if (process.env.BAIDU_SITE_VERIFICATION) {
+      head.push(['meta', { name: 'baidu-site-verification', content: process.env.BAIDU_SITE_VERIFICATION }]);
+    }
 
     if (!cleanPath || cleanPath === '/') {
       head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
