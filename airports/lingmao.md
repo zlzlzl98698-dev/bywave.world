@@ -263,7 +263,7 @@ rules:
 | **入门月度折算** | ¥19/月 | 折合仅约 ¥8/月 (年付¥99) | ¥20/月 (120GB) | 折合仅约 ¥7/月 (年付¥84) |
 | **特色专有功能** | 标准 | 斯诺克 147 永久套餐 / 大带宽 | 7×24小时真人客服 / 不限时包 | 傻瓜式自研客户端 / 超低年费 |
 | **优惠代码支持** | `lmao888` | `AMM` | `muguang5555` | `flycat888` |
-| **官网直达链接** | [直达 灵猫网络 官网](/go/lingmao/) | [直达光速云官网](/go/guangsu/) | [直达暮光加速官网](/go/muguang/) | [直达飞猫云官网](/go/feimao/) |
+| **官网直达链接** | <a href="/go/lingmao/" target="_blank" rel="nofollow sponsored noopener">直达 灵猫网络 官网 ↗</a> | <a href="/go/guangsu/" target="_blank" rel="nofollow sponsored noopener">直达光速云官网 ↗</a> | <a href="/go/muguang/" target="_blank" rel="nofollow sponsored noopener">直达暮光加速官网 ↗</a> | <a href="/go/feimao/" target="_blank" rel="nofollow sponsored noopener">直达飞猫云官网 ↗</a> |
 
 ---
 

@@ -263,7 +263,7 @@ rules:
 | **入门月度折算** | ¥25/月 | 折合仅约 ¥8/月 (年付¥99) | ¥20/月 (120GB) | 折合仅约 ¥7/月 (年付¥84) |
 | **特色专有功能** | 宣称最高 6Gbps | 斯诺克 147 永久套餐 / 大带宽 | 7×24小时真人客服 / 不限时包 | 傻瓜式自研客户端 / 超低年费 |
 | **优惠代码支持** | `qyt85 / qyt80` | `AMM` | `muguang5555` | `flycat888` |
-| **官网直达链接** | [直达 青云梯 官网](/go/qingyunti/) | [直达光速云官网](/go/guangsu/) | [直达暮光加速官网](/go/muguang/) | [直达飞猫云官网](/go/feimao/) |
+| **官网直达链接** | <a href="/go/qingyunti/" target="_blank" rel="nofollow sponsored noopener">直达 青云梯 官网 ↗</a> | <a href="/go/guangsu/" target="_blank" rel="nofollow sponsored noopener">直达光速云官网 ↗</a> | <a href="/go/muguang/" target="_blank" rel="nofollow sponsored noopener">直达暮光加速官网 ↗</a> | <a href="/go/feimao/" target="_blank" rel="nofollow sponsored noopener">直达飞猫云官网 ↗</a> |
 
 ---
 

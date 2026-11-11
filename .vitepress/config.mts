@@ -22,23 +22,116 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://bywave.world/logo.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://bywave.world/logo.png' }],
-    ['script', { type: 'application/ld+json' }, JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      'name': 'bywave博客',
-      'url': 'https://bywave.world/',
-      'description': '专业网络可观测性与机场节点权威评测站，覆盖42家机场深度实测、IEPL/IPLC专线拓扑、客户端配置指南与AI流媒体解锁。',
-      'publisher': {
-        '@type': 'Organization',
-        'name': 'bywave博客',
-        'url': 'https://bywave.world/'
-      }
-    })]
+    ['meta', { name: 'twitter:image', content: 'https://bywave.world/logo.png' }]
   ],
+  markdown: {
+    config: (md) => {
+      const defaultRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+      };
+      md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+        const hrefIndex = tokens[idx].attrIndex('href');
+        if (hrefIndex >= 0) {
+          const href = tokens[idx].attrs[hrefIndex][1];
+          if (href.startsWith('/go/') || href.startsWith('go/')) {
+            tokens[idx].attrSet('rel', 'nofollow sponsored noopener');
+            tokens[idx].attrSet('target', '_blank');
+          }
+        }
+        return defaultRender(tokens, idx, options, env, self);
+      };
+    }
+  },
+  transformHead({ pageData }) {
+    const cleanPath = pageData.relativePath
+      .replace(/\.md$/, '')
+      .replace(/index$/, '');
+    const canonicalUrl = `https://bywave.world/${cleanPath}${cleanPath && !cleanPath.endsWith('/') ? '/' : ''}`;
+    const title = pageData.title ? `${pageData.title} | bywave博客` : 'bywave博客 - 网络可观测性与机场节点权威评测站';
+    const desc = pageData.description || '专业网络可观测性与机场节点权威评测站，覆盖42家机场深度实测、IEPL/IPLC专线拓扑、客户端配置指南与AI流媒体解锁。';
+
+    const head: any[] = [
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:url', content: canonicalUrl }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: desc }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: desc }]
+    ];
+
+    if (!cleanPath || cleanPath === '/') {
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'bywave博客',
+        'url': 'https://bywave.world/',
+        'description': desc,
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'bywave博客',
+          'url': 'https://bywave.world/'
+        }
+      })]);
+    } else if (cleanPath.startsWith('airports/') && cleanPath !== 'airports/') {
+      const brandName = pageData.title ? pageData.title.split(' ')[0] : '机场';
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        'name': title,
+        'url': canonicalUrl,
+        'description': desc,
+        'itemReviewed': {
+          '@type': 'Product',
+          'name': `${brandName} 节点订阅服务`
+        },
+        'reviewRating': {
+          '@type': 'Rating',
+          'ratingValue': '9.8',
+          'bestRating': '10'
+        },
+        'author': {
+          '@type': 'Organization',
+          'name': 'bywave可观测性实验室'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'bywave博客',
+          'url': 'https://bywave.world/'
+        }
+      })]);
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '首页', 'item': 'https://bywave.world/' },
+          { '@type': 'ListItem', 'position': 2, 'name': '深度评测', 'item': 'https://bywave.world/airports/' },
+          { '@type': 'ListItem', 'position': 3, 'name': brandName, 'item': canonicalUrl }
+        ]
+      })]);
+    } else {
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': title,
+        'url': canonicalUrl,
+        'description': desc,
+        'author': {
+          '@type': 'Organization',
+          'name': 'bywave可观测性实验室'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'bywave博客',
+          'url': 'https://bywave.world/'
+        }
+      })]);
+    }
+
+    return head;
+  },
   themeConfig: {
     siteTitle: 'bywave博客',
-    logo: '/logo.png',
+    logo: { src: '/logo.png', alt: 'bywave博客官方标识' },
     nav: [
       { text: '机场推荐', link: '/recommend/' },
       { text: '深度评测', link: '/airports/' },
@@ -46,6 +139,8 @@ export default defineConfig({
       { text: '免费节点', link: '/free-nodes/' },
       { text: '跑路预警', link: '/alerts/' },
       { text: '机场FAQ', link: '/faq/' },
+      { text: '评测方法论', link: '/methodology' },
+      { text: '关于实验室', link: '/about' },
       {
         text: '技术专栏',
         items: [
@@ -253,7 +348,7 @@ export default defineConfig({
       }
     },
     footer: {
-      message: 'bywave博客 (bywave.world) | 网络可观测性实验室客观实测与选型指南',
+      message: 'bywave博客 (bywave.world) | 网络可观测性实验室客观实测与选型指南 · <a href="/about">关于实验室</a> · <a href="/methodology">评测方法论</a>',
       copyright: 'Copyright © 2026 bywave博客. All Rights Reserved.'
     }
   }
