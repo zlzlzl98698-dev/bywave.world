@@ -1,0 +1,13 @@
+{{ $q := .Get "q" }}
+
+<div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden;">
+  <details style="padding: 1rem 1.25rem; cursor: pointer;">
+    <summary style="font-weight: 700; color: #fff; font-size: 1.02rem; list-style: none; display: flex; align-items: center; justify-content: space-between;">
+      <span>❓ {{ $q }}</span>
+      <span style="color: var(--color-accent); font-family: var(--font-mono);">▼</span>
+    </summary>
+    <div style="margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+      {{ .Inner }}
+    </div>
+  </details>
+</div>

@@ -1,0 +1,113 @@
+{{ define "main" }}
+<div class="article-layout">
+  <article class="article-main">
+    <nav style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+      <a href="/">首页</a> / 
+      <a href="/{{ .Section }}/">{{ if eq .Section "airports" }}机场评测库{{ else if eq .Section "lines" }}专线技术{{ else if eq .Section "clients" }}客户端教程{{ else if eq .Section "unlock" }}AI与流媒体解锁{{ else if eq .Section "guides" }}选型指南{{ else if eq .Section "protocols" }}底层协议{{ else }}{{ .Section }}{{ end }}</a> / 
+      <span style="color: var(--text-secondary);">{{ .Title }}</span>
+    </nav>
+
+    <header class="article-header">
+      <h1 class="article-title">{{ .Title }}</h1>
+      <div class="article-meta">
+        <span>🕒 更新时间：{{ .Lastmod.Format "2006-01-02" }}</span>
+        <span>🏷️ 栏目：{{ .Section }}</span>
+        <span>📖 字数深度：约 {{ .WordCount }} 字</span>
+        <span>⚡ 审校状态：Verified Bywave Lab</span>
+      </div>
+    </header>
+
+    {{/* If this page corresponds to a brand in brands.json, show the NOC Summary Panel */}}
+    {{ $slug := .File.TranslationBaseName }}
+    {{ $brand := index (where $.Site.Data.brands "slug" $slug) 0 }}
+    {{ if $brand }}
+      <div class="noc-speed-card" style="margin-bottom: 2.5rem;">
+        <div class="noc-header">
+          <span>📡 基础设施监控面板 (INFRASTRUCTURE SERVICE SNAPSHOT)</span>
+          <span>状态: {{ if eq $brand.dataStatus "measured" }}MEASURED DATA (已实测){{ else }}VENDOR DATA (品牌申报){{ end }}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.72rem;">品牌定位与架构</div>
+            <div style="color: #fff; font-weight: 700; font-size: 1.1rem;">{{ $brand.name }} ({{ $brand.lineType }})</div>
+          </div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.72rem;">最低价格门槛</div>
+            <div style="color: var(--color-accent); font-weight: 700; font-size: 1.1rem;">{{ $brand.minPrice }}</div>
+          </div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.72rem;">专属优惠码</div>
+            <div style="color: var(--color-success); font-weight: 700; font-size: 1.1rem;">{{ $brand.coupon }}</div>
+          </div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.72rem;">协议与客户端</div>
+            <div style="color: #cbd5e1; font-size: 0.9rem;">{{ delimit $brand.protocols ", " }}</div>
+          </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.3); border-radius: 4px; padding: 1rem; margin-bottom: 1rem;">
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase;">核心特征速览</div>
+          <ul style="list-style: none; padding-left: 0; font-size: 0.88rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.35rem;">
+            {{ range $brand.features }}
+              <li><span style="color: var(--color-accent); margin-right: 0.5rem;">▸</span>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <a href="{{ $brand.redirectPath }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored noopener" style="max-width: 250px;">
+            访问 {{ $brand.name }} 官方网站 ↗
+          </a>
+          <span style="font-size: 0.78rem; color: var(--text-muted);">
+            * 含邀请推广码，通过链接购买不增加任何费用。
+          </span>
+        </div>
+      </div>
+    {{ end }}
+
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+
+    <!-- Honeycomb Related Mesh Links (蜂巢互链网) -->
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+      <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 1.2rem;">🔗 蜂巢式网络技术互联矩阵</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+        <div class="metric-item">
+          <div class="metric-label">相关专线技术</div>
+          <a href="/lines/" style="font-weight: 600;">IEPL vs IPLC 专线全面解密 →</a>
+        </div>
+        <div class="metric-item">
+          <div class="metric-label">推荐配套客户端</div>
+          <a href="/clients/" style="font-weight: 600;">Clash Verge Rev 完整调优手册 →</a>
+        </div>
+        <div class="metric-item">
+          <div class="metric-label">解锁风控避坑</div>
+          <a href="/unlock/" style="font-weight: 600;">ChatGPT 与 Claude 原生 IP 解锁 →</a>
+        </div>
+        <div class="metric-item">
+          <div class="metric-label">横向同级品牌</div>
+          <a href="/airports/" style="font-weight: 600;">浏览 42 家机场评测总榜 →</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Sticky Sidebar Table of Contents -->
+  <aside class="sidebar">
+    <div class="toc-card">
+      <div class="toc-title">目录导航 (Table of Contents)</div>
+      {{ .TableOfContents }}
+
+      {{ if $brand }}
+        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+          <div class="toc-title">快捷通道</div>
+          <a href="{{ $brand.redirectPath }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored noopener" style="width: 100%; font-size: 0.82rem;">
+            进入 {{ $brand.name }} 官网
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </aside>
+</div>
+{{ end }}

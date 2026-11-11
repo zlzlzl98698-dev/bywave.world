@@ -1,0 +1,5 @@
+{{- $data := slice -}}
+{{- range .Site.Data.brands -}}
+  {{- $data = $data | append (dict "name" .name "slug" .slug "rank" .rank "tier" .tier "minPrice" .minPrice "coupon" .coupon "lineType" .lineType "affiliateUrl" .affiliateUrl) -}}
+{{- end -}}
+{{- $data | jsonify -}}

@@ -1,0 +1,50 @@
+<header class="site-header" data-pagefind-ignore>
+  <div class="header-container">
+    <a href="/" class="brand-logo" title="{{ .Site.Params.brandName }}">
+      <span class="status-indicator" title="NOC Status: 100% Operational"></span>
+      <span>BYWAVE</span>
+      <span class="brand-badge">OBSERVATORY</span>
+    </a>
+    
+    <nav class="main-nav">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+      <button onclick="toggleSearch()" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; margin-left: 0.5rem;" title="搜索全站测评">
+        🔍 搜索
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Search Modal -->
+<div id="searchModal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 999; backdrop-filter: blur(5px); justify-content: center; align-items: flex-start; padding-top: 10vh;" onclick="if(event.target===this) toggleSearch()">
+  <div style="background: var(--bg-card); width: 100%; max-width: 650px; border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-card);">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.1rem; color: #fff;">🔍 节点与专题搜索 (Pagefind Instant Search)</h3>
+      <button onclick="toggleSearch()" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;">✕</button>
+    </div>
+    <div id="search"></div>
+  </div>
+</div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  let pagefindLoaded = false;
+  function toggleSearch() {
+    const modal = document.getElementById('searchModal');
+    if (modal.style.display === 'none' || modal.style.display === '') {
+      modal.style.display = 'flex';
+      if (!pagefindLoaded) {
+        new PagefindUI({ element: "#search", showSubResults: true, resetStyles: false });
+        pagefindLoaded = true;
+      }
+    } else {
+      modal.style.display = 'none';
+    }
+  }
+</script>

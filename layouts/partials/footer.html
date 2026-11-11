@@ -1,0 +1,60 @@
+<footer class="site-footer" data-pagefind-ignore>
+  <div class="footer-container">
+    <div class="footer-disclaimer">
+      <strong>⚖️ 商业与测试数据透明声明：</strong>
+      {{ .Site.Params.disclaimer }}
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>{{ .Site.Params.brandName }}</h4>
+        <p style="margin-bottom: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+          {{ .Site.Params.description }}
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent);">
+          ● 全球网络监控节点：28+ | 实测样本更新：2026-11
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>六大核心专题</h5>
+        <ul>
+          <li><a href="/airports/">42 家机场品牌库</a></li>
+          <li><a href="/lines/">IEPL/IPLC 专线评测</a></li>
+          <li><a href="/clients/">全平台客户端配置</a></li>
+          <li><a href="/unlock/">ChatGPT/流媒体解锁</a></li>
+          <li><a href="/guides/">外贸/出海场景选型</a></li>
+          <li><a href="/protocols/">下一代代理协议底层</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>核心主推机场</h5>
+        <ul>
+          <li><a href="/airports/guangsu/">光速云 (综合推荐第1)</a></li>
+          <li><a href="/airports/muguang/">暮光加速 (多设备)</a></li>
+          <li><a href="/airports/feimao/">飞猫云 (小白极简)</a></li>
+          <li><a href="/airports/weifeng/">微风网络 (平价专线)</a></li>
+          <li><a href="/airports/dalaoyun/">大佬云 (低成本备用)</a></li>
+          <li><a href="/airports/xingdaomeng/">星岛梦 (不限时套餐)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>蜂巢式快速导航</h5>
+        <ul>
+          <li><a href="/clients/clash-verge-rev/">Clash Verge Rev 教程</a></li>
+          <li><a href="/clients/shadowrocket/">小火箭配置指南</a></li>
+          <li><a href="/unlock/chatgpt-access-denied/">ChatGPT 报错排查</a></li>
+          <li><a href="/lines/iepl-vs-iplc/">IEPL 与 IPLC 差异</a></li>
+          <li><a href="/protocols/vless-reality/">VLESS-Reality 原理</a></li>
+          <li><a href="/sitemap.xml">站点完整 Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ now.Format "2006" }} {{ .Site.Params.brandName }} ({{ .Site.Params.domain }}). 保留所有权利。严禁未授权抄袭与爬虫洗稿。</p>
+    </div>
+  </div>
+</footer>

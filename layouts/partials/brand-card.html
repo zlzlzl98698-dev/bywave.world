@@ -1,0 +1,52 @@
+<div class="brand-card {{ if .isMainPush }}main-push{{ end }}" id="brand-{{ .slug }}">
+  <div class="card-header">
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+        <span class="card-rank">NO.{{ .rank }}</span>
+        <h3 class="card-title">{{ .name }}</h3>
+      </div>
+      <div class="card-subtitle">{{ .openedYear }} · {{ .lineType }}</div>
+    </div>
+    <div>
+      {{ if eq .dataStatus "measured" }}
+        <span class="badge badge-measured">● 实测数据</span>
+      {{ else }}
+        <span class="badge badge-vendor">▲ 申报数据</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="card-meta-table">
+    <div class="card-meta-item">
+      <div class="key">最低价格</div>
+      <div class="val" style="color: var(--color-accent);">{{ .minPrice }}</div>
+    </div>
+    <div class="card-meta-item">
+      <div class="key">专属优惠码</div>
+      <div class="val" style="color: var(--color-success); font-family: var(--font-mono);">{{ .coupon }}</div>
+    </div>
+    <div class="card-meta-item">
+      <div class="key">协议支持</div>
+      <div class="val">{{ delimit .protocols ", " }}</div>
+    </div>
+    <div class="card-meta-item">
+      <div class="key">设备限制</div>
+      <div class="val">{{ .deviceLimit }}</div>
+    </div>
+  </div>
+
+  <ul class="card-features">
+    {{ range first 3 .features }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+
+  <div class="card-actions">
+    <a href="{{ .redirectPath }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored noopener">
+      直达官网 ↗
+    </a>
+    <a href="/airports/{{ .slug }}/" class="btn btn-secondary">
+      深度评测
+    </a>
+  </div>
+</div>

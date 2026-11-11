@@ -1,0 +1,13 @@
+{
+  "name": "bywave-world",
+  "version": "1.0.0",
+  "description": "bywave博客 - 网络可观测性与机场节点权威评测站",
+  "scripts": {
+    "build": "hugo && npx pagefind --site public",
+    "dev": "hugo server -D",
+    "index": "npx pagefind --site public"
+  },
+  "devDependencies": {
+    "pagefind": "^1.6.0"
+  }
+}
